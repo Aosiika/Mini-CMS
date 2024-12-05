@@ -1,0 +1,662 @@
+/* Variables para tema claro (default) */
+:root {
+    --background-color: #ffffff;
+    --text-color: #4a4a4a;
+    --card-background: #ffffff;
+    --card-text: #4a4a4a;
+    --navbar-background: #00d1b2;
+    --navbar-text: #ffffff;
+    --border-color: #dbdbdb;
+    --link-color: #3273dc;
+    --button-background: #f5f5f5;
+    --button-text: #363636;
+    --footer-background: #fafafa;
+}
+
+/* Variables para tema oscuro */
+[data-theme="dark"] {
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-background: #2c2c2c;
+    --card-text: #ffffff;
+    --navbar-background: #2c2c2c;
+    --navbar-text: #ffffff;
+    --border-color: #363636;
+    --link-color: #3273dc;
+    --button-background: #363636;
+    --button-text: #ffffff;
+    --footer-background: #2c2c2c;
+    --input-background: #363636;
+    --input-text: #ffffff;
+    --input-placeholder: #999999;
+}
+
+/* Estilos generales */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar */
+.navbar.is-primary {
+    background-color: var(--navbar-background) !important;
+}
+
+.navbar-item,
+.navbar-link {
+    color: var(--navbar-text) !important;
+}
+
+/* Cards */
+.card {
+    background-color: var(--card-background);
+    color: var(--card-text);
+    border: 1px solid var(--border-color);
+}
+
+.card-content {
+    background-color: var(--card-background);
+}
+
+.card-footer {
+    background-color: var(--card-background);
+    border-top: 1px solid var(--border-color);
+}
+
+.card-footer-item {
+    color: var(--text-color);
+}
+
+/* Títulos y texto */
+.title,
+.subtitle {
+    color: var(--text-color) !important;
+}
+
+/* Enlaces */
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-color);
+    opacity: 0.8;
+}
+
+/* Botones */
+.button.is-light {
+    background-color: var(--button-background) !important;
+    color: var(--button-text) !important;
+}
+
+.button.is-light:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--footer-background);
+    color: var(--text-color);
+}
+
+/* Notificaciones */
+.notification {
+    background-color: var(--card-background);
+    color: var(--text-color);
+}
+
+.notification.is-danger {
+    background-color: #ff3860 !important;
+    color: #fff !important;
+}
+
+.notification.is-success {
+    background-color: #23d160 !important;
+    color: #fff !important;
+}
+
+.notification.is-info {
+    background-color: #209cee !important;
+    color: #fff !important;
+}
+
+/* Panel de administración */
+[data-theme="dark"] .menu {
+    background-color: var(--card-background);
+    padding: 1rem;
+}
+
+[data-theme="dark"] .menu-label {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+[data-theme="dark"] .menu-list a {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .menu-list a:hover {
+    background-color: var(--navbar-background);
+    color: var(--navbar-text);
+}
+
+[data-theme="dark"] .box {
+    background-color: var(--card-background);
+    color: var(--text-color);
+}
+
+/* Tablas */
+[data-theme="dark"] .table {
+    background-color: var(--card-background);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .table th,
+[data-theme="dark"] .table td {
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+/* Formularios */
+[data-theme="dark"] .input,
+[data-theme="dark"] .textarea,
+[data-theme="dark"] .select select {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+/* Editor CKEditor */
+[data-theme="dark"] .ck.ck-editor__main > .ck-editor__editable {
+    background-color: var(--card-background) !important;
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .ck.ck-toolbar {
+    background-color: var(--navbar-background) !important;
+    border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .ck.ck-button {
+    color: var(--text-color) !important;
+}
+
+/* Transiciones suaves */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Añade estas reglas específicas para el dashboard */
+[data-theme="dark"] .navbar.is-white {
+    background-color: var(--card-background) !important;
+}
+
+[data-theme="dark"] .navbar.is-white .navbar-brand > a.navbar-item {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .menu {
+    background-color: var(--card-background);
+    padding: 1rem;
+}
+
+[data-theme="dark"] .menu-label {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+[data-theme="dark"] .menu-list a {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .menu-list a:hover {
+    background-color: var(--navbar-background);
+    color: var(--navbar-text);
+}
+
+[data-theme="dark"] .box {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+/* Estilos para las estadísticas del dashboard */
+[data-theme="dark"] .box .title {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .box .subtitle {
+    color: var(--text-color) !important;
+    opacity: 0.8;
+}
+
+/* Ajustes para la tabla de actividad reciente */
+[data-theme="dark"] .table {
+    background-color: var(--card-background);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .table th,
+[data-theme="dark"] .table td {
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Estilos específicos para modo oscuro */
+[data-theme="dark"] {
+    /* Textos generales */
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .title,
+[data-theme="dark"] .subtitle,
+[data-theme="dark"] .label,
+[data-theme="dark"] .menu-label,
+[data-theme="dark"] .navbar-item,
+[data-theme="dark"] .navbar-link,
+[data-theme="dark"] .button,
+[data-theme="dark"] .input,
+[data-theme="dark"] .textarea,
+[data-theme="dark"] .select select,
+[data-theme="dark"] .table th,
+[data-theme="dark"] .table td,
+[data-theme="dark"] .card-content,
+[data-theme="dark"] .content h1,
+[data-theme="dark"] .content h2,
+[data-theme="dark"] .content h3,
+[data-theme="dark"] .content h4,
+[data-theme="dark"] .content h5,
+[data-theme="dark"] .content h6,
+[data-theme="dark"] .content p {
+    color: var(--text-color) !important;
+}
+
+/* Inputs y campos de formulario */
+[data-theme="dark"] .input,
+[data-theme="dark"] .textarea,
+[data-theme="dark"] .select select {
+    background-color: var(--input-background);
+    color: var(--input-text);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .input::placeholder,
+[data-theme="dark"] .textarea::placeholder {
+    color: var(--input-placeholder);
+}
+
+/* Editor CKEditor */
+[data-theme="dark"] .ck.ck-editor__main > .ck-editor__editable {
+    background-color: var(--input-background) !important;
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .ck.ck-toolbar {
+    background-color: var(--card-background) !important;
+    border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .ck.ck-button {
+    color: var(--text-color) !important;
+}
+
+/* Menús y navegación */
+[data-theme="dark"] .menu-list a {
+    color: var(--text-color) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .menu-list a:hover {
+    background-color: var(--navbar-background);
+    color: var(--navbar-text) !important;
+}
+
+[data-theme="dark"] .menu-list a.is-active {
+    background-color: var(--link-color);
+    color: var(--navbar-text) !important;
+}
+
+/* Links específicos */
+[data-theme="dark"] a.navbar-item,
+[data-theme="dark"] .menu-list a,
+[data-theme="dark"] .panel-block {
+    color: var(--text-color) !important;
+}
+
+/* Sobreescribir estilos de enlaces en el dashboard */
+[data-theme="dark"] .menu a,
+[data-theme="dark"] .menu .menu-list a {
+    color: var(--text-color) !important;
+}
+
+/* Iconos en el menú */
+[data-theme="dark"] .menu-list a .icon {
+    color: var(--text-color) !important;
+}
+
+/* Estado activo y hover */
+[data-theme="dark"] .menu-list a:hover .icon,
+[data-theme="dark"] .menu-list a.is-active .icon {
+    color: var(--navbar-text) !important;
+}
+
+/* Tablas */
+[data-theme="dark"] .table {
+    background-color: var(--card-background);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Botones */
+[data-theme="dark"] .button.is-light {
+    background-color: var(--button-background) !important;
+    color: var(--button-text) !important;
+}
+
+/* Notificaciones y mensajes */
+[data-theme="dark"] .notification {
+    background-color: var(--card-background);
+    color: var(--text-color);
+}
+
+/* Selectores y dropdowns */
+[data-theme="dark"] .select:not(.is-multiple):not(.is-loading)::after {
+    border-color: var(--text-color);
+}
+
+[data-theme="dark"] .select:not(.is-multiple):not(.is-loading):hover::after {
+    border-color: var(--text-color);
+}
+
+/* Etiquetas y badges */
+[data-theme="dark"] .tag:not(.is-light):not(.is-success):not(.is-warning):not(.is-danger) {
+    background-color: var(--button-background);
+    color: var(--text-color);
+}
+
+/* Links */
+[data-theme="dark"] a:not(.button):not(.navbar-item):not(.tag) {
+    color: var(--link-color);
+}
+
+[data-theme="dark"] a:not(.button):not(.navbar-item):hover {
+    color: var(--link-color);
+    opacity: 0.8;
+}
+
+/* Botón de tema */
+#theme-toggle {
+    background: transparent;
+    border: none;
+}
+
+#theme-toggle .icon {
+    color: var(--navbar-text) !important;
+}
+
+[data-theme="dark"] #theme-toggle {
+    background: transparent;
+}
+
+[data-theme="dark"] #theme-toggle .icon {
+    color: var(--text-color) !important;
+}
+
+/* Asegurar que los iconos sean visibles en la navbar */
+.navbar-item .icon,
+.navbar-link .icon {
+    color: var(--navbar-text) !important;
+}
+
+[data-theme="dark"] .navbar-item .icon,
+[data-theme="dark"] .navbar-link .icon {
+    color: var(--text-color) !important;
+}
+
+/* Hover states para los iconos */
+.navbar-item:hover .icon,
+.navbar-link:hover .icon {
+    opacity: 0.8;
+}
+
+/* Estilos para posts */
+[data-theme="dark"] .post-content {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .post-content h1,
+[data-theme="dark"] .post-content h2,
+[data-theme="dark"] .post-content h3,
+[data-theme="dark"] .post-content h4,
+[data-theme="dark"] .post-content h5,
+[data-theme="dark"] .post-content h6 {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .post-content a {
+    color: var(--link-color);
+}
+
+[data-theme="dark"] .post-content blockquote {
+    background-color: var(--card-background);
+    border-left-color: var(--link-color);
+}
+
+[data-theme="dark"] .breadcrumb a {
+    color: var(--link-color);
+}
+
+[data-theme="dark"] .breadcrumb li.is-active a {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .breadcrumb li::before {
+    color: var(--text-color);
+}
+
+/* Estilos para las tarjetas en modo oscuro - con mayor especificidad */
+[data-theme="dark"] .card,
+[data-theme="dark"] .card-content,
+[data-theme="dark"] .card-footer {
+    background-color: var(--card-background) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color);
+}
+
+/* Títulos y contenido de las tarjetas */
+[data-theme="dark"] .card .title,
+[data-theme="dark"] .card .subtitle,
+[data-theme="dark"] .card .content,
+[data-theme="dark"] .card .card-content .title,
+[data-theme="dark"] .card .card-content p,
+[data-theme="dark"] .card h1,
+[data-theme="dark"] .card h2,
+[data-theme="dark"] .card h3,
+[data-theme="dark"] .card h4,
+[data-theme="dark"] .card h5,
+[data-theme="dark"] .card h6 {
+    color: var(--text-color) !important;
+}
+
+/* Texto gris en las tarjetas */
+[data-theme="dark"] .card .has-text-grey,
+[data-theme="dark"] .has-text-grey {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Título principal */
+[data-theme="dark"] h1.title,
+[data-theme="dark"] .content h1.title {
+    color: var(--text-color) !important;
+}
+
+/* Asegurar que el texto del excerpt sea blanco */
+[data-theme="dark"] .card .content p,
+[data-theme="dark"] .card .card-content .content {
+    color: var(--text-color) !important;
+}
+
+/* Botón Leer más */
+[data-theme="dark"] .button.is-link {
+    background-color: var(--link-color) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .button.is-link:hover {
+    opacity: 0.9;
+}
+
+/* Texto publicado */
+[data-theme="dark"] .card .has-text-grey,
+[data-theme="dark"] .card-content .has-text-grey {
+    color: #b5b5b5 !important;
+}
+
+/* Estilos para fechas y metadatos */
+[data-theme="dark"] .has-text-grey {
+    color: #b5b5b5 !important;
+}
+
+/* Botón Leer más */
+[data-theme="dark"] .button.is-link {
+    background-color: var(--link-color);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .button.is-link:hover {
+    opacity: 0.9;
+}
+
+/* Texto del excerpt */
+[data-theme="dark"] .card .content {
+    color: var(--text-color) !important;
+}
+
+/* Asegurar que los títulos de las tarjetas sean blancos */
+[data-theme="dark"] .card .title.is-4 {
+    color: var(--text-color) !important;
+}
+
+/* Estilos específicos para las cards en el menú */
+[data-theme="dark"] .card .title,
+[data-theme="dark"] .card .title.is-4,
+[data-theme="dark"] .card .card-content .title,
+[data-theme="dark"] .card .card-content .title.is-4 {
+    color: var(--text-color) !important;
+}
+
+/* Textos de fecha y publicado */
+[data-theme="dark"] .card .has-text-grey,
+[data-theme="dark"] .card-content .has-text-grey,
+[data-theme="dark"] .card .content .has-text-grey {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Título del post */
+[data-theme="dark"] .card .title,
+[data-theme="dark"] .card-content .title {
+    color: var(--text-color) !important;
+}
+
+/* Contenido de la card */
+[data-theme="dark"] .card .content,
+[data-theme="dark"] .card .content p,
+[data-theme="dark"] .card-content .content,
+[data-theme="dark"] .card-content .content p {
+    color: var(--text-color) !important;
+}
+
+/* Texto de publicado */
+[data-theme="dark"] .card .has-text-grey,
+[data-theme="dark"] .card-content .has-text-grey {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Asegurar que todos los textos dentro de las cards sean blancos */
+[data-theme="dark"] .card * {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .card .has-text-grey * {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Estilos para menú desplegable */
+[data-theme="dark"] .navbar-dropdown {
+    background-color: var(--card-background);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .navbar-dropdown .navbar-item {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .navbar-dropdown .navbar-item:hover {
+    background-color: var(--navbar-background);
+    color: var(--navbar-text) !important;
+}
+
+[data-theme="dark"] .navbar-link:not(.is-arrowless)::after {
+    border-color: var(--text-color);
+}
+
+[data-theme="dark"] .navbar-item.has-dropdown:hover .navbar-link,
+[data-theme="dark"] .navbar-item.has-dropdown.is-active .navbar-link {
+    background-color: var(--navbar-background);
+    color: var(--navbar-text) !important;
+}
+
+/* Ajustar la transición del dropdown */
+.navbar-dropdown {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.navbar-item.has-dropdown:hover .navbar-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Estilos específicos para la página de login */
+[data-theme="dark"] .box {
+    background-color: var(--card-background);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .title {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .label {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .input {
+    background-color: var(--input-background);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .input:focus {
+    border-color: var(--link-color);
+}
+
+[data-theme="dark"] .button.is-primary {
+    background-color: var(--link-color);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .has-text-centered {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] body {
+    background-color: var(--background-color);
+} 
